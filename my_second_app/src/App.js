@@ -1,6 +1,9 @@
 import './App.css';
+import MyFirstClassComponent from './MyFirstClassComponent';
 import MyFirstComponent from './MyFirstComponent';
 import MySecondComponent from './MySecondComponent';
+import PropsValidate from "./PropsValidate";
+import SecondClassComponent from './SecondClassComponent';
 
 function App() {
   const name ="aamir";
@@ -15,18 +18,24 @@ function App() {
 
         <h2>My First Component called from parent</h2>
         </MyFirstComponent>
-      <MySecondComponent parentComponent ={App} >
+       <MySecondComponent parentComponent ={App} >
 
         <h2>My Second Component called from App</h2>
-{/* 
+
         <ul>
           <li>Food</li>
 
 
           <li>Drink</li>
-        </ul> */}
+        </ul>
       </MySecondComponent>
-      
+      <PropsValidate name ={"aamir"} age={26} renderable ={"renderable"} rollNumber={"ee001"} remarks ={"ss"} array={[1,2,3,4]} mobjects = {{name:"aamir",age:26}}>
+        <h2>Hiii i am child of PropsValidate</h2>
+      </PropsValidate>
+      <MyFirstClassComponent  name ={"aamir"} age = {26} />
+      <SecondClassComponent  name={"aamir"}/>
+      <SecondClassComponent  name={"Avanash"}/>
+
     </div>
   );
 }
