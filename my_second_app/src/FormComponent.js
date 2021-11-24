@@ -4,17 +4,21 @@ export default class FormComponent extends Component {
 
 state = {
 
+
     name: "",
     age : 0,
+    mobile:0,
+
+    list : [this.name ,this.age,this.mobile],
 
 }
 
 
 
 
-onNameChange =(event)=>{
+onChange =(event)=>{
 this.setState({
-    name :event.target.value,
+    [event.target.name] :event.target.value,
 })
 
 }
@@ -22,19 +26,22 @@ this.setState({
 
 
 
-onAgeChange =(event)=>{
-  this.setState({
-      age : event.target.value,
-  })
-  
-  }
-
-
 
   onSubmit = (event)=>{
       event.preventDefault();  //to prevent from reset the form
       console.log(this.state);
+
+      const myListCopy = this.state.list;
+      myListCopy.push(event.target.value);
+      this.setState({
+          list : myListCopy,
+      })
+
+
+
   }
+
+
 
     render(){
         return(
@@ -44,16 +51,19 @@ onAgeChange =(event)=>{
                 <h1> Form Tag</h1>
                 <form onSubmit = {this.onSubmit}>
                     <label>Name </label> 
-                   <input type = "text" value = {this.state.name}   onChange ={this.onNameChange}></input>
+                   <input name={'name'} type = "text" value = {this.state.name}   onChange ={this.onChange}></input>
                    <br/>
                    <br/>
                    <label>age</label>
-                   <input  value ={this.state.age}    onChange = {this.onAgeChange}></input>
+                   <input name ={'age'} value ={this.state.age}    onChange = {this.onChange}></input>
                     <br/>
                     <br/>
+                     <label>Mobile </label>
+                    <input name ={'mobile'} value ={this.state.mobile}    onChange = {this.onChange}></input>
+
                     <br/>
 
-                   <button  onClick = {this.onAdd}  type ="submit">Submit</button>    
+                   <button  onClick ={this.onAdd}  type ="submit">Submit</button>    
           
 
 
@@ -61,7 +71,13 @@ onAgeChange =(event)=>{
 
 
 
-
+               {this.state.list .map((element ,index) => (
+            
+               <div id ={index} >
+               <h2>Hiii i am {this.state.name} , I am {this.state.age} years old</h2>
+              
+              </div>
+              ))}
 
 
 
