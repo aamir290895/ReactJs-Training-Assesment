@@ -4,6 +4,7 @@ import ClassComponent from './ClassComponent';
 import TrueComponent from './TrueComponent';
 import FalseComponent from './FalseComponent';
 import ConditionalComponent from './ConditionalComponent';
+import ListComponent from './ListComponent';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
 
     {/* <ClassComponent/> */}
     <ConditionalComponent/>
+    <ListComponent/>
     </div>
   );
 }

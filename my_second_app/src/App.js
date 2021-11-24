@@ -1,4 +1,5 @@
 import './App.css';
+import FormComponent from './FormComponent';
 import MyFirstClassComponent from './MyFirstClassComponent';
 import MyFirstComponent from './MyFirstComponent';
 import MySecondComponent from './MySecondComponent';
@@ -13,7 +14,7 @@ function App() {
 
 
 
-      <h1> Hello {name && name.length? name :"World"}</h1>
+      {/* <h1> Hello {name && name.length? name :"World"}</h1>
       <MyFirstComponent  name ={name} age ={26} parentComponent = {App}>
 
         <h2>My First Component called from parent</h2>
@@ -34,7 +35,9 @@ function App() {
       </PropsValidate>
       <MyFirstClassComponent  name ={"aamir"} age = {26} />
       <SecondClassComponent  name={"aamir"}/>
-      <SecondClassComponent  name={"Avanash"}/>
+      <SecondClassComponent  name={"Avanash"}/> */}
+
+      <FormComponent/>
 
     </div>
   );
