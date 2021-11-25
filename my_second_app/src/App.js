@@ -1,14 +1,22 @@
 import './App.css';
+import Controller from './Controller';
 import FormComponent from './FormComponent';
+import LifeCycle from './LifeCycle';
 import MyFirstClassComponent from './MyFirstClassComponent';
 import MyFirstComponent from './MyFirstComponent';
 import MySecondComponent from './MySecondComponent';
 import PropsValidate from "./PropsValidate";
 import SecondClassComponent from './SecondClassComponent';
 
+
+
+
+
 function App() {
   const name ="aamir";
   const name1 = "aam"
+
+  
   return (
     <div className="App">
 
@@ -35,12 +43,12 @@ function App() {
       </PropsValidate>
       <MyFirstClassComponent  name ={"aamir"} age = {26} />
       <SecondClassComponent  name={"aamir"}/>
-      <SecondClassComponent  name={"Avanash"}/> */}
+      <SecondClassComponent  name={"Avanash"}/> */ }
 
-      <FormComponent/>
-
+      <Controller/>
+   
     </div>
   );
-}
+ }
 
 export default App;

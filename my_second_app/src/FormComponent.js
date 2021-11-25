@@ -9,7 +9,7 @@ state = {
     age : 0,
     mobile:0,
 
-    list : [this.name ,this.age,this.mobile],
+    list : [],
 
 }
 
@@ -31,16 +31,22 @@ this.setState({
       event.preventDefault();  //to prevent from reset the form
       console.log(this.state);
 
-      const myListCopy = this.state.list;
-      myListCopy.push(event.target.value);
-      this.setState({
-          list : myListCopy,
-      })
 
-
+    this.setState({
+        list   :  [...this.state.list ,{name : this.state.name ,age : this.state.age}]
+    })
 
   }
+ 
 
+  onDelete =(index)=>{
+   const listCopy = this.state.list;
+   listCopy.splice(index ,1);
+   this.setState({
+       list : listCopy,
+   })
+
+  }
 
 
     render(){
@@ -71,11 +77,14 @@ this.setState({
 
 
 
-               {this.state.list .map((element ,index) => (
+               {this.state.list .map((list,index) => (
             
-               <div id ={index} >
-               <h2>Hiii i am {this.state.name} , I am {this.state.age} years old</h2>
-              
+               <div key ={index} >
+               {<h2>name {list.name } age {list.age}</h2>}
+               <button onClick = {()=>{
+                 this.onDelete(index);
+
+               }}>Delete{index}</button>
               </div>
               ))}
 
@@ -84,25 +93,7 @@ this.setState({
               </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         );
-     
-    
-   
-
 
     }
 }
