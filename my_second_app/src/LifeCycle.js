@@ -41,7 +41,7 @@ export default class LifeCycle extends Component {
    componentWillUnmount(){
 
 
-    console.log("like a de-constructor")
+     console.log("like a de-constructor");
    }
 
 }

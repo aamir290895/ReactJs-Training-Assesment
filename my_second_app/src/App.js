@@ -6,6 +6,7 @@ import MyFirstClassComponent from './MyFirstClassComponent';
 import MyFirstComponent from './MyFirstComponent';
 import MySecondComponent from './MySecondComponent';
 import PropsValidate from "./PropsValidate";
+import RefsExample from './RefsExample';
 import SecondClassComponent from './SecondClassComponent';
 
 
@@ -45,8 +46,7 @@ function App() {
       <SecondClassComponent  name={"aamir"}/>
       <SecondClassComponent  name={"Avanash"}/> */ }
 
-      <Controller/>
-   
+      <RefsExample/>  
     </div>
   );
  }
