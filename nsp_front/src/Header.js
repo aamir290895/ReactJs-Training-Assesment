@@ -3,38 +3,47 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import img1 from "./Components/logo_nsp.png"
 
 
-
-
 export default class Header extends Component {
 
     render(){
 
        return (
         <>
+         <div class="container">
+               <div class="row">
+                    <div class="col-4 col-lg-2">
+                    <img id = "logo" src={img1}  alt="image" className="logo_nsp"></img>
+
+                    </div>
+               <div class="col-md-8">
+               <div className="nsp_header">
+                     <h1>National Scholarship Portal</h1>
+                   <h2>Government of India</h2>
+               </div>
+               </div>
+                    </div>
+         </div>
+   
        <div className="nsp_header">
         <div class ="col">   
-       <img id = "logo" src={img1}  alt="image" className="logo_nsp"></img>
-       <div class="nsp">
-        <h1>National Scholarship Portal</h1>
-        <h2>Government of India</h2>
+     
        </div>
        </div>
-       </div>
-
+      
 
        <div class="shadow p-3 mb-5 bg-body rounded">
          <div class="container-md">
          
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="container-fluid">
+         <a class="navbar-brand" href="#">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#"></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
