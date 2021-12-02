@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom'
 
 
 export default class Home extends Component {
@@ -10,6 +11,7 @@ export default class Home extends Component {
 
         return(
                <>
+               <Link to={'/home'}/>
                    <div class="container">
                        <div class="row">
                           <div class="col">

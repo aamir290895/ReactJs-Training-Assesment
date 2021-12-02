@@ -1,7 +1,8 @@
 import './App.css';
 import Student from './Components/Student';
 import StudentApplication from './Components/StudentApplication';
-import { Routes,Route } from 'react-router-dom';
+import { Routes,Route } from 'react-router';
+
 
 import Ministry from './Components/Ministry';
 import InstituteApplication from './Components/InstituteApplication';
@@ -15,23 +16,20 @@ function App() {
   return (
     <div className="App">
               <Header/>
-              <Home/>
 
-                <div className = "Content">
-                  {/* <Routes>
-                          <Route path = "/home" exact component = {Home}></Route>
-                          <Route path = "/employees" component = {Student}></Route>
-                          <Route path = "/add-employee/:id" component = {StudentApplication}></Route>
-                          <Route path = "/view-employee/:id" component = {Ministry}></Route>
-                          <Route path = "/view-employee/:id" component = {InstituteApplication}></Route>
-                          <Route path = "/view-employee/:id" component = {Scheme}></Route>
-                          <Route path = "/view-employee/:id" component = {StateNodal}></Route>
+                    <Routes>
+
+                          <Route path = {'/home'}   exact element ={<Home/>}></Route>
+                          <Route path = {'/student'} element = {<Student/>}></Route>
+
+                            
 
 
-                  </Routes>   */}
-                </div>
+                     </Routes>
+            
                <Footer/>     
     </div>
+
   );
 }
 

@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import img1 from "./Components/logo_nsp.jpeg"
+import {Link} from 'react-router-dom'
 
 
 export default class Header extends Component {
@@ -36,7 +37,8 @@ export default class Header extends Component {
          
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-         <a class="navbar-brand" href="#">Home</a>
+         {/* <a class="navbar-brand" href="#">Home</a> */}
+         <Link  to={'/home'}>Home</Link>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -46,13 +48,15 @@ export default class Header extends Component {
           <a class="nav-link active" aria-current="page" href="#"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          {/* <a class="nav-link" href="#">About Us</a> */}
+          <Link to={'/student'}>Student</Link>
+
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          {/* <a class="nav-link" href="#">Contact Us</a> */}
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">New Registration</a>
+          {/* <a class="nav-link" href="#">New Registration</a> */}
         </li>
         
        
