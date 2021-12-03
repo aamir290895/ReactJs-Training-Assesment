@@ -11,6 +11,7 @@ import StateNodal from './Components/StateNodal';
 import Home from './Components/Home';
 import Header from './Header';
 import Footer from './Footer';
+import AboutUs from './Components/AboutUs';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
 
                           <Route path = {'/home'}   exact element ={<Home/>}></Route>
                           <Route path = {'/student'} element = {<Student/>}></Route>
-
+                           <Route path= {'/aboutUs'} element={<AboutUs/>}></Route>
                             
 
 
